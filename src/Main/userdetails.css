@@ -1,0 +1,72 @@
+/* UserDetailsPage.css */
+.user-details-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bio {
+    color: #666;
+}
+
+.status {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+.active {
+    color: #4caf50; /* Green for active */
+}
+
+.inactive {
+    color: #f44336; /* Red for inactive */
+}

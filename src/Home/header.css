@@ -1,0 +1,109 @@
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.header .logo {
+  font-size: 1.5rem; /* Updated to match the size used in React component */
+  font-weight: bold;
+  color: #f4f4f4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem; /* Adjusted to a consistent unit */
+}
+
+.header nav ul li a {
+  color: #f4f4f4;
+  padding: 1rem; /* Adjusted padding */
+  position: relative;
+  transition: color 0.3s ease; /* Added transition duration */
+}
+
+.header nav ul li a::before {
+  content: '';
+  position: absolute;
+  width: 100%; /* Full width for underline effect */
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ff5e57;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: transform 0.3s ease, visibility 0.3s ease; /* Adjusted transition */
+}
+
+.header nav ul li a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.header .search input {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  border-radius: 25px;
+  color: #fff;
+  outline: none;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.header .search input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ff5e57;
+}
+
+/* Modal Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  margin-top: 40%;
+}
+
+.close-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #c82333;
+}

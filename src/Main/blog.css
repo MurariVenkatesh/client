@@ -1,0 +1,161 @@
+/* General container styling */
+.container {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Ensure that the file item maintains aspect ratio */
+.file-item {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive images and videos */
+.file-item img,
+.file-item video {
+    max-width: 100%;
+    max-height: 100%; /* Ensure the file fits within the container */
+    object-fit: contain; /* Preserve aspect ratio without cropping */
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.file-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    color: #fff;
+    font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+/* Action buttons styling */
+.overlay-actions button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; /* Adjust font size for icons */
+    transition: background 0.3s;
+}
+
+.overlay-actions button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Comment Modal */
+/* Modal styling */
+.modal-overlay.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content styling */
+.modal-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Close button styling */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Comments section */
+.comments-section {
+    margin-top: 20px;
+}
+
+.previous-comments {
+    margin-bottom: 20px;
+}
+
+/* Container for input and button */
+.comment-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+}
+
+/* Input field styling */
+.comment-input-container textarea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: none; /* Optional: to prevent resizing */
+    min-height: 50px; /* Optional: to set a minimum height */
+}
+
+/* Send button styling */
+.send-button {
+    background: #007bff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-button:hover {
+    background: #0056b3;
+}

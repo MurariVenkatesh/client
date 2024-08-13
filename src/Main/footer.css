@@ -1,0 +1,51 @@
+/* Footer styling */
+.footer {
+    flex: 0 0 60px; /* Fixed height for footer */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #282c34;
+    padding: 0 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    color: #f1f1f1;
+}
+
+/* Footer button icons */
+.footer-icon {
+    background: none;
+    border: none;
+    color: #f1f1f1;
+    cursor: pointer;
+    font-size: 24px; /* Adjust size as needed */
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 1200px) {
+    .footer {
+        padding: 0 15px;
+    }
+
+    .footer-icon {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 0 15px;
+    }
+
+    .footer-icon {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 0 10px;
+    }
+
+    .footer-icon {
+        font-size: 18px;
+    }
+}
